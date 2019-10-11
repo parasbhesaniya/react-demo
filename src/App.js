@@ -1,6 +1,5 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { ReactReduxContext } from 'react-redux'
 
 import store from './redux/store';
 import { Home } from "./Components";
@@ -19,7 +18,7 @@ class App extends React.Component {
         console.log(err);
       })
   }
-  
+
   render() {
     if (this.state) {
       return (
