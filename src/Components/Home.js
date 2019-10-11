@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
+import { bindActionCreators } from 'redux';
+
 import { sortProducts } from '../services/sortProducts';
 import Products from './Products';
 import Header from './Header';

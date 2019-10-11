@@ -7,4 +7,4 @@ export const setGreeting_2Action = (greeting) => {
       greeting_2: greeting,
     }
   }
-}
+};

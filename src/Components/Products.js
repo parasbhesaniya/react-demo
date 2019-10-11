@@ -6,9 +6,10 @@ const Products = ({ items }) => {
       <div key={item.name}>
         <hr />
         <img
-          src={item.image}
-          width="200"
-          height="200"
+          src={(item.image && item.image) || 'https://screenshotlayer.com/images/assets/placeholder.png'}
+          alt={item.name}
+          width="200px"
+          height="200px"
         />
         <h3>
           {item.name}

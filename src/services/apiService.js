@@ -1,5 +1,6 @@
-import axios from 'axios'
-const baseUrl = ` https://mazdr9dk.herokuapp.com`
+import axios from 'axios';
+
+const baseUrl = ` https://mazdr9dk.herokuapp.com`;
 const instance = axios.create({
   baseURL: baseUrl,
   headers: {
@@ -12,6 +13,6 @@ const api = {
   getData: data => {
     return instance.post('/get-mock-data', data)
   }
-}
+};
 
-export { api }
+export { api };

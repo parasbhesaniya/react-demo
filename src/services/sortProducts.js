@@ -7,6 +7,6 @@ const sortProducts = (items) => {
   })
 
   return [...openRestaurant, ...closedRestaurant];
-}
+};
 
 export { sortProducts };
