@@ -9,7 +9,7 @@ class App extends React.Component {
     api.getData({ name: 'test' })
       .then(res => {
         this.setState({
-          ...res,
+          ...res.data,
         })
       })
       .catch(err => {
@@ -20,7 +20,7 @@ class App extends React.Component {
     console.log(this.state);
     if (this.state) {
       return (
-        <Home />
+        <Home data={this.state} />
       );
     }
     return null;
