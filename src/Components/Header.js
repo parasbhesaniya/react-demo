@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const Header = ({ greeting_2 }) => {
   const greeting = window.localStorage.getItem('greeting');
@@ -9,4 +10,10 @@ const Header = ({ greeting_2 }) => {
   )
 }
 
-export default Header;
+const mapStateToProps = (state, props) => {
+  return ({
+    greeting_2: state.greetings.greeting_2
+  })
+}
+
+export default connect(mapStateToProps)(Header);

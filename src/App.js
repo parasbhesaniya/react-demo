@@ -1,5 +1,8 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { ReactReduxContext } from 'react-redux'
 
+import store from './redux/store';
 import { Home } from "./Components";
 import { api } from './services/apiService';
 
@@ -16,11 +19,13 @@ class App extends React.Component {
         console.log(err);
       })
   }
+  
   render() {
-    console.log(this.state);
     if (this.state) {
       return (
-        <Home data={this.state} />
+        <Provider store={store}>
+          <Home data={this.state} />
+        </Provider>
       );
     }
     return null;
